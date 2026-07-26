@@ -1,26 +1,200 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>article 1</title>
-  <style>
-    body {
-      margin: 0;
-      background: #000;
-      color: #fff;
-      font-family: monospace;
-      padding: 40px 20px;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    a { color: cyan; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    h1 { font-size: 20px; }
-  </style>
+<meta charset="UTF-8">
+<title>The Schrödinger Equation</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#000;
+    color:#e8e8e8;
+    font-family:Georgia,"Times New Roman",serif;
+    line-height:1.9;
+    font-size:18px;
+}
+
+.container{
+    max-width:720px;
+    margin:auto;
+    padding:80px 30px 120px;
+}
+
+/* ---------- Header ---------- */
+
+header{
+    position:sticky;
+    top:0;
+    background:rgba(0,0,0,.82);
+    backdrop-filter:blur(12px);
+    padding:35px 0 25px;
+    z-index:100;
+    transition:
+        opacity .25s,
+        transform .25s;
+}
+
+header.fade{
+    opacity:.18;
+    transform:translateY(-12px);
+}
+
+.back{
+    color:#7fcfff;
+    text-decoration:none;
+    font-size:.9rem;
+}
+
+.back:hover{
+    text-decoration:underline;
+}
+
+hr{
+    border:none;
+    border-top:1px solid #333;
+    margin:25px 0;
+}
+
+h1{
+    font-size:2.8rem;
+    font-weight:400;
+    margin-bottom:.4rem;
+}
+
+.meta{
+    color:#777;
+    font-size:.95rem;
+}
+
+/* ---------- Article ---------- */
+
+article{
+    margin-top:60px;
+}
+
+p{
+    margin:1.8em 0;
+}
+
+blockquote{
+    margin:2rem 0;
+    padding-left:1.4rem;
+    border-left:2px solid #555;
+    color:#bdbdbd;
+    font-style:italic;
+}
+
+sup{
+    font-size:.7em;
+    color:#777;
+}
+
+a{
+    color:#8fd8ff;
+}
+</style>
+
 </head>
+
 <body>
-  <p><a href="index.html">← back</a></p>
-  <h1>article 01</h1>
-  <p>ここに記事本文を書く。</p>
+
+<div class="container">
+
+<header id="pageHeader">
+
+<a class="back" href="index.html">← Back</a>
+
+<hr>
+
+<h1>The Schrödinger Equation</h1>
+
+<div class="meta">
+July 2026 · 18 min read
+</div>
+
+</header>
+
+<article>
+
+<p>
+The pages that follow are irreversible.
+</p>
+
+<p>
+If you've already tried to grab for it,
+welcome.
+</p>
+
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae magna sit amet augue pretium volutpat.
+</p>
+
+<p>
+Suspendisse potenti. Integer sodales velit sed eros interdum fermentum.
+</p>
+
+<p>
+Curabitur sed sem vitae velit luctus placerat.
+</p>
+
+<p>
+Mauris ultrices risus vitae arcu suscipit, nec bibendum neque porta.
+</p>
+
+<p>
+Praesent vel elit at libero varius aliquam.
+</p>
+
+<p>
+Aliquam erat volutpat. Pellentesque habitant morbi tristique senectus et netus et malesuada.
+</p>
+
+<p>
+Vivamus a neque ac nulla dictum malesuada.
+</p>
+
+<p>
+Integer sed massa non lorem sollicitudin volutpat.
+</p>
+
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</p>
+
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</p>
+
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</p>
+
+</article>
+
+</div>
+
+<script>
+const header = document.getElementById("pageHeader");
+
+window.addEventListener("scroll", () => {
+
+    if(window.scrollY > 120){
+        header.classList.add("fade");
+    }else{
+        header.classList.remove("fade");
+    }
+
+});
+</script>
+
 </body>
 </html>
