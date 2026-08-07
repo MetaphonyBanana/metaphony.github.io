@@ -28,7 +28,7 @@ function makePlaceholderShards(count = 14) {
 
 // banana.glb を試みに読み込む。存在しない/失敗した場合はプレースホルダーのまま。
 // Blender側の命名規則: 全体メッシュ = "Banana_Whole", 破片群 = "Shard", "Shard.001", "Shard.002"...(Blenderの重複命名はドット区切り)
-const SHARD_NAME_RE = /^Shard(\.\d+)?$/;
+const SHARD_NAME_RE = /^Shard\d*$/;
 
 function upgradeToGlass(material) {
   // すでにKHR_materials_transmissionが読み込まれていれば(GLTFLoaderがMeshPhysicalMaterial.transmissionに変換済み)、そのまま使う
